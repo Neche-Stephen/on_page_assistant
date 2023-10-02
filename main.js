@@ -23,54 +23,12 @@ window.addEventListener('load', showSpinner);
 // Initial text for the moving div
 let divText = '';
 
+// Define the initial model source
+let initialModelSource = 'model1/scene.gltf';
 
-
-// Function to move the div to the position of the clicked button
-// function moveDivTo(button) {
-//     console.log('calling');
-//     // if(button == 'steering'){
-//     //     selected = steering;
-//     // }
-//     // else if(button == 'gas_pedal'){
-//     //     selected = gas_pedal;
-//     // }
-//     // else if(button == 'brake_pedal'){
-//     //     selected = brake_pedal;
-//     // }
-//     const movingDiv = document.getElementById('movingDiv');
-
-//     // Get the position of the button relative to the viewport
-//     const buttonRect = button.getBoundingClientRect();
-
-//     // Set the position of the div to match the button's position
-//     movingDiv.style.left = buttonRect.left + 'px';
-//     movingDiv.style.top = buttonRect.top + 'px';
-// }
-
-// function moveDivTo(button) {
-//     const movingDiv = document.getElementById('movingDiv');
-//     const buttonRect = button.getBoundingClientRect();
-//     const divRect = movingDiv.getBoundingClientRect();
-//     const duration = 500; // Animation duration in milliseconds
-//     const frames = 60; // Number of animation frames
-//     const stepX = (buttonRect.left - divRect.left) / frames;
-//     const stepY = (buttonRect.top - divRect.top) / frames;
-//     let frame = 0;
-
-//     function animate() {
-//         if (frame < frames) {
-//             movingDiv.style.left = (divRect.left + stepX * frame) + 'px';
-//             movingDiv.style.top = (divRect.top + stepY * frame) + 'px';
-//             frame++;
-//             requestAnimationFrame(animate);
-//         }
-//     }
-
-//     animate();
-// }
 
 // Function to move the div to the position of the clicked button and change the text
-function moveDivTo(button, newText) {
+function moveDivTo(button, newText, newSource) {
     const movingDiv = document.getElementById('movingDiv');
     const buttonRect = button.getBoundingClientRect();
     const divRect = movingDiv.getBoundingClientRect();
@@ -92,6 +50,8 @@ function moveDivTo(button, newText) {
     }
 
     animate();
+    const modelViewer = document.querySelector('.main-model');
+    modelViewer.setAttribute('src', newSource);
     // Update the global divText variable
     divText = newText;
 }
@@ -106,8 +66,8 @@ function moveDivTo(button, newText) {
 
 // Function to reset the div to its initial position and text
 function resetDiv() {
- // Reset the text content to the initial text
- console.log('kk')
+ // Reset the text conconst modelViewer = document.querySelector('.main-model');
+    modelViewer.setAttribute('src', initialModelSource);
 
 
     const movingDiv = document.getElementById('movingDiv');
