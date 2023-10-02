@@ -116,7 +116,7 @@ function resetDiv() {
     const paragraph = movingDiv.querySelector('p');
     // const paragraph = document.getElementById('desc')
     // console.log(paragraph)
-    paragraph.textContent = "Learn how to drive. I will be your guide";
+    paragraph.textContent = "Learn how to drive. I will be your guide. Click any button to learn";
 
    
 }
