@@ -7,7 +7,7 @@
 	<meta name="generator" content="Geany 1.37.1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
 	<link href="style.css" rel="stylesheet">
 	<!-- The following libraries and polyfills are recommended to maximize browser support -->
     <!-- NOTE: you must adjust the paths as appropriate for your project -->
@@ -29,9 +29,65 @@
 
 <body>
 	<!-- 3D content for your site: -->
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col">
+				<h4>Car Training</h4>
+			</div>
+		</div>
+	</div> -->
 
-    <model-viewer src="scene.gltf" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
-    </model-viewer>
+	<div class="container-fluid button-container">
+		<div class="row">
+			<div class="col-3">
+				<button onclick="resetDiv()" class="btn btn-danger">Reset</button>
+					<div class="row model" id="movingDiv">
+						<div class="col">
+							<model-viewer class="main-model" src = "scene.gltf" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
+								<p id = 'desc' class="model-description">Learn how to drive. I will be your guide</p>
+							</model-viewer>
+							
+						</div>
+					</div>
+				
+			</div>
+			<div class="col-9">
+				<div class="btn-row p-2">
+					<div class="col-12 first_column">
+						<div class="row justify-content-between">
+							<div class="col-3">
+								<button id="steering" class="btn btn-primary" onclick="moveDivTo(this, 'This is what you use to turn the car. To turn left or right.')">Steering Wheel</button>
+							</div>
+							<div class="col-3">
+								<button id="gas_pedal" class="btn btn-primary" onclick="moveDivTo(this, ' This is what you use to make the car go faster.')">Gas pedal</button>
+							</div>
+							<div class="col-3">
+								<button id="brake_pedal" class="btn btn-primary" onclick="moveDivTo(this, 'This is what you use to slow down or stop the car.')">Brake pedal</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="row justify-content-between">
+							<div class="col-3">
+								<button class="btn btn-primary" onclick="moveDivTo(this, ' This is what you use to change gears.')">Gear shift:</button>
+							</div>
+							<div class="col-3">
+								<button class="btn btn-primary" onclick="moveDivTo(this, 'Use it to alert others in emergencies, but avoid unnecessary honking')">Horn</button>
+							</div>
+							<div class="col-3">
+								<button class="btn btn-primary" onclick="moveDivTo(this, 'This is used to keep the car from moving when it is parked')">Parking Brake (Handbrake)</button>
+							</div>
+						</div>
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	
 
 
 	<!-- 💁 Include both scripts below to support all browsers! -->
@@ -45,6 +101,8 @@
 	<script nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
 </body>
 
 </html>

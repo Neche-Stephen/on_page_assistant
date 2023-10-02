@@ -2,8 +2,54 @@
 margin:0;
 padding:0;
 }
-model-viewer{
-width:100%;
-height:600px;
-background-color:black;
+
+
+.button-container{
+    /* border: 1px solid red; */
+    height: 100vh;
+    position: relative;
 }
+
+.btn-row{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    border: 1px solid purple;
+    height: 100vh;
+}
+
+.first_column{
+    margin-bottom: 299px;
+}
+
+.model{
+    position: absolute;
+    top: 30%;
+    /* border: 1px solid purple; */
+    /* width: 100%; */
+    /* pointer-events: none;  */
+    pointer-events: none;
+    transition: all 0.5s ease;
+    /* width: 10%; */
+}
+
+model-viewer{
+    width:12000%;
+    height:250px;
+    /* background-color:black; */
+    border: 1px solid green;
+    pointer-events: all;
+    }
+
+    .model-description {
+        /* color:  pink; */
+        font-weight: 600;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+         /* Optional: Add a semi-transparent background */
+        padding: 10px; /* Optional: Add some padding for readability */
+      }
