@@ -35,10 +35,10 @@ padding:0;
 }
 
 model-viewer{
-    width:12000%;
+    /* width:250px; */
     height:250px;
     /* background-color:black; */
-    border: 1px solid green;
+    /* border: 1px solid green; */
     pointer-events: all;
     }
 
