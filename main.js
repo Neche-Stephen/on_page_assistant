@@ -66,10 +66,11 @@ function moveDivTo(button, newText, newSource) {
 
 // Function to reset the div to its initial position and text
 function resetDiv() {
- // Reset the text conconst modelViewer = document.querySelector('.main-model');
+
+    const modelViewer = document.querySelector('.main-model');
     modelViewer.setAttribute('src', initialModelSource);
 
-
+ // Reset the text content
     const movingDiv = document.getElementById('movingDiv');
     movingDiv.style.left = '0px';
     movingDiv.style.top = '30%';
