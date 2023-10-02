@@ -53,3 +53,7 @@ model-viewer{
          /* Optional: Add a semi-transparent background */
         padding: 10px; /* Optional: Add some padding for readability */
       }
+
+      #loadingSpinner {
+        display: none;
+    }

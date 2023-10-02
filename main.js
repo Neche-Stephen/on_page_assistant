@@ -1,10 +1,27 @@
-// const gas_pedal = document.getElementById('gas_pedal');
-// const brake_pedal = document.getElementById('brake_pedal');
-// const steering = document.getElementById('steering');
-// let selected;
+// Function to show the spinner
+function showSpinner() {
+    document.getElementById('loadingSpinner').style.display = 'inline-block';
+}
+
+// Function to hide the spinner
+function hideSpinner() {
+    document.getElementById('loadingSpinner').style.display = 'none';
+}
+
+// Function to handle the model load event
+function handleModelLoad() {
+    hideSpinner(); // Hide the spinner when the model is loaded
+}
+
+// Attach the handleModelLoad function to the load event of the model-viewer
+const modelViewer = document.querySelector('.main-model');
+modelViewer.addEventListener('load', handleModelLoad);
+
+// Show the spinner when the page loads (before the model is loaded)
+window.addEventListener('load', showSpinner);
 
 // Initial text for the moving div
-let divText = 'Initial Text';
+let divText = '';
 
 
 
